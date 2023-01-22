@@ -1,0 +1,174 @@
+---
+title: "PS1"
+output:
+  pdf_document: default
+---
+
+# Q3: Exercise 5
+
+## Profit maximization of the firm over time
+
+From the assumption of the marginal costs which are $\epsilon$ for the period 1, and  $c-\lambda q_1$ for the period 2, we can get the cost functions are
+$$
+\begin{aligned}
+C(q_1)&=\epsilon q_1 +Const_1\\
+C(q_1, q_2)&= q_2(c-\lambda q_1)+Const_2
+\end{aligned}
+$$
+for $q_1>0$ and $q_2>0$ where $Const_1$ and $Const_2$ are constant variables.
+And let $q_1>0$, $q_2$, $p_1>0$, and $p_2$. This means $0<q_1<1$, $0<q_2<1$, $0<p_1<1$, and $0<p_2<1$ from $q_1=1-p_1,\quad q_2=1-p_2$.
+
+Next, the profit maximization of the firms over time is 
+$$
+\begin{aligned}
+\max_{p_1,p_2} (p_1q_1-C_1(q_1))+(p_2q_2-C(q_1, q_2)) \\
+s.t. q_1=1-p_1,\quad q_2=1-p_2 \\
+\end{aligned}
+$$
+So, the FOC of this problem is
+$$
+\begin{aligned}
+\mathcal{L}&= p_1(1-p_1)-(\epsilon (1-p_1)+Const_1) + \delta(p_2(1-p_2)-((1-p_2)(c-\lambda (1-p_1))+Const_2)) \\
+\frac{\partial \mathcal{L}}{\partial p_1} &=1-2p_1+\epsilon-\delta(1-p_2)\lambda=0 \\
+\frac{\partial\mathcal{L}}{\partial p_2} &=1-2p_2+c-(1-p_1)\lambda=0
+\end{aligned}
+$$
+
+## Compute the optimal pricing strategy
+
+From the FOC, if $\lambda \neq2$ (from the assumption, $\lambda$ is smaller than 2), then we can get the optimal pricing strategies of $p_1$ and $p_2$ are
+$$
+\begin{aligned}
+p_1 &=\frac{\lambda^2+(2\delta-1-c)\lambda-2(\epsilon+1)}{\lambda^2-4} \\
+p_2&=\frac{\delta\lambda^2+(1- \epsilon)\lambda-2(1+c)}{\lambda^2-4} \\
+\end{aligned}
+$$
+
+
+## Compute the Lerner Index by each periods
+
+And then, the Lerner Index for the period 1 is
+$$
+\begin{aligned}
+L_1&=\frac{p_1-\epsilon}{p_1} =1-\frac{\epsilon}{p_1}\\
+&=1-\frac{\epsilon(\lambda^2-4)}{\lambda^2+(2\delta-1-c)\lambda-2(\epsilon+1)} \\
+&=\frac{\lambda^2+(2\delta-1-c)\lambda-2(\epsilon+1)-\epsilon(\lambda^2-4)}{\lambda^2+(2\delta-1-c)\lambda-2(\epsilon+1)} \\
+&=\frac{(1-\epsilon)\lambda^2+(2\delta-1-c)\lambda -2(1-\epsilon)}{\lambda^2+(2\delta-1-c)\lambda-2(\epsilon+1)}\\
+\end{aligned}
+$$
+We also have the FOC for the period 1 is 
+
+$$
+\begin{aligned}
+D(p_1)+p_1D'(p_1)-C'_1D'_1(p_1)-\delta C'_2D'_1(p_1)=0 \\
+\end{aligned}
+$$
+
+And so, the elasticity of demand for the period 1 is
+
+$$
+\begin{aligned}
+\Rightarrow -\frac{D(p_1)}{p^1D'(p_1)}&=\frac{p_1-C'_1-\delta C'_2}{p_1} \\
+&=L_1-\frac{\delta C'_2}{p_1}\\
+&=L_1+\frac{\delta(1-p_2)\lambda}{p_1}>0
+\end{aligned}
+$$
+where $0<p_1<1,0<p_2<1$.
+
+Therefore, in this situation, the relative profit margin (Lerner Index for the period 1) is lower than the elasticity of demand for the period 1.
+
+Also, the Lerner Index for the period 2 is
+
+$$
+\begin{aligned}
+L_2&=\frac{p_2-(c-\lambda (1-p_1))}{p_2} \\
+&=1-\frac{c-\lambda (1-p_1)}{p_2} \\
+&= 1-\frac{2p_2-1}{p_2}\\
+&=1-2+\frac{1}{p_2} \\
+&=-1+\frac{\lambda^2-4}{\delta\lambda^2+(1- \epsilon)\lambda-2(1+c)
+} \\
+&=\frac{-\delta\lambda^2-(1- \epsilon)\lambda+2(1+c)+\lambda^2-4}{\lambda^2+(1-\epsilon)\lambda-2(1+c)} \\
+&=\frac{(1-\delta)\lambda^2-(1-\epsilon)\lambda-2(1-c)}{\lambda^2+(1-\epsilon)\lambda-2(1+c)}
+\end{aligned}
+$$
+
+However, in the period 2, we can have the relative profit margin (Lerner Index for the period 2) is equal to the elasticity of demand for the period 2 because the FOC for the period 2 is
+
+$$
+\begin{aligned}
+D(p_2)+p_2D'(p_2)-C'_2D'_2(p_2)&=0 \\
+\end{aligned}
+$$
+So, the elasticity of demand for the period 2
+$$
+\begin{aligned}
+\Rightarrow -\frac{D(p_1)}{p^1D'(p_1)}&=\frac{p_1- C'_2}{p_1} \\
+&=L_2
+\end{aligned}
+$$
+
+
+## Does output increase or decrease over time?
+
+From the above result, the output for the period 1 ($q_1$) is 
+$$
+\begin{aligned}
+q_1&= 1-p_1\\
+&= 1-\frac{\lambda^2+(2\delta-1-c)\lambda-2(\epsilon+1)}{\lambda^2-4} \\
+&=\frac{\lambda^2-4-\lambda^2-(2\delta-1-c)\lambda+2(\epsilon+1)}{\lambda^2-4}\\
+&=\frac{(c+1-2\delta)\lambda+2(\epsilon-1)}{\lambda^2-4}
+\end{aligned}
+$$
+
+From the above result, the output for the period 2 ($q_2$) is 
+$$
+\begin{aligned}
+q_2&= 1-p_2\\
+&= 1-\frac{\delta\lambda^2+(1- \epsilon)\lambda-2(1+c)}{\lambda^2-4} \\
+&=\frac{\lambda^2-4-\delta\lambda^2-(1- \epsilon)\lambda+2(1+c)}{\lambda^2-4}\\
+&=\frac{(1-\delta)\lambda^2-(1-\epsilon)\lambda+2(c-1)}{\lambda^2-4}
+\end{aligned}
+$$
+
+And then, the difference between the output for the period 1 and that for the period 2 is
+$$
+\begin{aligned}
+q_2-q_1 &=\frac{(1-\delta)\lambda^2-(1-\epsilon)\lambda+2(c-1)}{\lambda^2-4}- \frac{(c+1-2\delta)\lambda+2(\epsilon-1)}{\lambda^2-4} \\
+&=\frac{(1-\delta)\lambda^2-(1-\epsilon)-(c+1-2\delta)+2c-2\epsilon}{\lambda^2-4} \\
+&=\frac{(1-\delta)\lambda^2+(-1+\epsilon-c-1+2\delta)\lambda+2c-2\epsilon}{\lambda^2-4} \\
+&=\frac{(1-\delta)\lambda^2-(2\delta-2+c-\epsilon)\lambda+2c-2\epsilon}{\lambda^2-4} \\
+&=\frac{\{(1-\delta)\lambda+(c-\epsilon)\}(\lambda-2)}{\lambda^2-4} \\
+&=\frac{(1-\delta)\lambda+(c-\epsilon)}{\lambda+2}
+\end{aligned}
+$$
+Therefore, if $(1-\delta)\lambda+(c-\epsilon)>0$, then the output increases over time. Also,  if $(1-\delta)\lambda+(c-\epsilon)>0$, then the output decreases over time. if $(1-\delta)\lambda+(c-\epsilon)=0$, then the output is equal overtime.
+
+
+## Supplement: Derivative of the prices
+
+The price for the period 1 is
+
+$$
+\begin{aligned}
+1-2p_1+\epsilon&=\delta(1-p_2)\lambda \\
+\Leftrightarrow p_2&= 1-\frac{1}{\delta\lambda}(1-2p_1+\epsilon)=\frac{\delta\lambda-1+2p_1-\epsilon}{\lambda} \\
+1-2p_2+c&=(1-p_1)\lambda \\
+\Leftrightarrow p_2&= \frac{1}{2}(1+c-(1-p_1)\lambda)\\
+2(\delta\lambda-1+2p_1-\epsilon)&=\lambda(1+c-(1-p_1)\lambda) \\
+2\delta\lambda-2+4p_1-2\epsilon&=\lambda+\lambda c - \lambda^2+p_1 \lambda^2 \\
+(\lambda^2-4)p_1&=\lambda^2+(2\delta-1-c)\lambda-2\epsilon-2 \\
+p_1 &=\frac{\lambda^2+(2\delta-1-c)\lambda-2(\epsilon+1)}{\lambda^2-4} \\
+\end{aligned}
+$$
+
+The price for the period 2 is
+
+$$
+\begin{aligned}
+p_2&=\frac{1}{2}(1+c-\bigg(1-\frac{\lambda^2+(2\delta-1-c)\lambda-2\epsilon-2}{\lambda^2-4} \bigg)\lambda) \\
+&=\frac{1}{2}(1+c-\bigg(\frac{-(2\delta-1-c)\lambda^2+2\epsilon\lambda-2\lambda}{\lambda^2-4} \bigg)) \\
+&=\frac{1}{2}\bigg(\frac{\lambda^2-4 + c\lambda^2 -4c+(2\delta-1-c)\lambda^2-2\epsilon\lambda+2\lambda}{\lambda^2-4} \bigg) \\
+&= \frac{1}{2}\bigg(\frac{2     \delta\lambda^2-4  -4c+2\lambda-2\lambda \epsilon}{\lambda^2-4} \bigg)\\
+&=\frac{\delta\lambda^2+(1- \epsilon)\lambda-2(1+c)}{\lambda^2-4} \\
+\end{aligned}
+$$

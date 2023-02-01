@@ -16,7 +16,7 @@ C(q_1, q_2)&= q_2(c-\lambda q_1)+Const_2
 \end{aligned}
 $$
 for $q_1>0$ and $q_2>0$ where $Const_1$ and $Const_2$ are constant variables.
-And let $q_1>0$, $q_2$, $p_1>0$, and $p_2$. This means $0<q_1<1$, $0<q_2<1$, $0<p_1<1$, and $0<p_2<1$ from $q_1=1-p_1,\quad q_2=1-p_2$.
+And let $q_1, q_2>0$, $p_1 ,p_2>0$. This means $0<q_1<1$, $0<q_2<1$, $0<p_1<1$, and $0<p_2<1$ from $q_1=1-p_1,\quad q_2=1-p_2$.
 
 Next, the profit maximization of the firms over time is 
 $$
@@ -141,7 +141,7 @@ q_2-q_1 &=\frac{(1-\delta)\lambda^2-(1-\epsilon)\lambda+2(c-1)}{\lambda^2-4}- \f
 &=\frac{(1-\delta)\lambda+(c-\epsilon)}{\lambda+2}
 \end{aligned}
 $$
-Therefore, if $(1-\delta)\lambda+(c-\epsilon)>0$, then the output increases over time. Also,  if $(1-\delta)\lambda+(c-\epsilon)>0$, then the output decreases over time. if $(1-\delta)\lambda+(c-\epsilon)=0$, then the output is equal overtime.
+Therefore, if $(1-\delta)\lambda+(c-\epsilon)>0$, then the output increases over time. Also,  if $(1-\delta)\lambda+(c-\epsilon)<0$, then the output decreases over time. if $(1-\delta)\lambda+(c-\epsilon)=0$, then the output is equal overtime.
 
 
 ## Supplement: Derivative of the prices
